@@ -1,0 +1,121 @@
+html {
+background-color: #222321; /* Sätter bakgrundsfärg för hela sidan */
+}
+
+.big-container {
+min-height: 100%; /* Sätter minimihöjden på .bigcontainer till 100% av viewportens höjd */
+display: grid; 
+grid-template-columns: auto auto auto auto;
+grid-template-areas: 
+"gardin1 container container gardin2";
+min-width: 100%;
+}
+
+.gardin1 img {
+grid-area: gardin1;
+height: 120vh;
+width: 20vw;
+position: absolute;
+left: 0;
+}
+
+.gardin2 img {
+grid-area: gardin2; 
+height: 120vh;
+width: 20vw;
+position: absolute;
+right: 0;
+}
+
+.container {
+grid-area: container;
+display: grid; /* Använder CSS Grid-layouten för att organisera innehållet */
+grid-template-columns: 100%; /* Definierar containerns bredd */
+grid-template-rows: auto;
+padding: 20px; /* Lägger till 20px padding inuti .container */
+grid-template-areas: 
+"header"
+"nav"
+"main"
+"footer";
+place-items: center;
+}
+
+header {
+grid-area: header;
+}
+
+#Linje2-img {
+width: 200px;
+height: 100px;
+}
+
+nav {
+grid-area: nav;
+background-color: #FFF;
+padding: 20px; 
+width: 100%; /* Täcker hela bredden av sidan */
+text-align: center;
+}
+
+a { 
+font-family: "lato", sans-serif;
+font-weight: 400;
+font-style: normal;
+text-decoration: none;
+padding: 5%;
+color: #000000;
+}
+
+main {
+grid-area: main;
+background-color: #fff;
+}
+
+footer {
+grid-area: footer; 
+}
+
+h1 {
+font-family: "lato", sans-serif;
+font-weight: 700;
+font-style: normal;
+padding: 10px;
+}
+
+p {
+font-family: "lato", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.karta {
+width: 90%;
+}
+
+#img-om {
+width: 180px;
+}
+
+#playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#myVideo {
+display: block;
+margin: 0 auto; 
+}
+
+.webbhandel img {
+width: 300px;
+}
